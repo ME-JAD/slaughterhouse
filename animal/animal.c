@@ -3,7 +3,7 @@
 //
 
 #include "animal.h"
-#include "pig.h"
+
 
 Animal *createAnimal(const char name[NAME_MAX_SIZE],
                      unsigned int weight,
@@ -21,6 +21,19 @@ Animal *createPig(const char name[NAME_MAX_SIZE],
                         birthDate,
                         PIG,
                         createRealPig(color));
+}
+
+Animal *createUnicorn(const char name[NAME_MAX_SIZE],
+                      unsigned int weight,
+                      unsigned int birthDate,
+                      unsigned int hornLength,
+                      unsigned int hornNumber,
+                      Rainbow *rainbow) {
+    return createAnimal(name,
+                        weight,
+                        birthDate,
+                        UNICORN,
+                        createRealUnicorn(hornLength, hornNumber, rainbow));
 }
 
 Animal *createAnimal(const char name[NAME_MAX_SIZE],
@@ -56,5 +69,7 @@ char *getScreamAnimal(Animal *animal) {
     switch (animal->typeAnimal) {
         case PIG:
             return getScreamPig((Pig *) animal->realAnimal);
+        case UNICORN:
+            return getScreamUnicorn((Unicorn *) animal->realAnimal);
     }
 }

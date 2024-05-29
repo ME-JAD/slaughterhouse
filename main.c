@@ -8,9 +8,19 @@ int main(void) {
                                 10,
                                 2020,
                                 "rose");
+    Animal *courtney = createUnicorn("Courtney",
+                                     100,
+                                     2010,
+                                     10,
+                                     2,
+                                     getDefaultRainbow());
     displayAnimal(barnabe);
+    displayAnimal(courtney);
     growAnimal(barnabe);
+    growAnimal(courtney);
     displayAnimal(barnabe);
+    displayAnimal(courtney);
     printf("%s\n", getScreamAnimal(barnabe));
+    printf("%s\n", getScreamAnimal(courtney));
     return 0;
 }

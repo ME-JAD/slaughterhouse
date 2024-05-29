@@ -3,6 +3,8 @@
 //
 #include <string.h>
 #include "typeanimal.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 #ifndef SLAUGHTERHOUSE_UNICORN_H
 #define SLAUGHTERHOUSE_UNICORN_H
