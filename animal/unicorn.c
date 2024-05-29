@@ -27,17 +27,5 @@ Rainbow *getDefaultRainbow() {
 }
 
 char *getScreamUnicorn(Unicorn *unicorn) {
-    char *scream = (char *) malloc(sizeof(char) * 100);
-    sprintf(scream,
-            "Je suis une licorne avec une crinière de %d cm, %d cornes et un arc-en-ciel de couleurs %s, %s, %s, %s, %s, %s et %s.",
-            unicorn->maneLength,
-            unicorn->hornsNumber,
-            unicorn->rainbow->colors[0],
-            unicorn->rainbow->colors[1],
-            unicorn->rainbow->colors[2],
-            unicorn->rainbow->colors[3],
-            unicorn->rainbow->colors[4],
-            unicorn->rainbow->colors[5],
-            unicorn->rainbow->colors[6]);
-    return scream;
+    return "Monde de merde !";
 }

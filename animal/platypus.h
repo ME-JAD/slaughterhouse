@@ -4,6 +4,7 @@
 
 #include <string.h>
 #include "typeanimal.h"
+#include <stdlib.h>
 
 #ifndef SLAUGHTERHOUSE_PLATYPUS_H
 #define SLAUGHTERHOUSE_PLATYPUS_H
@@ -15,6 +16,6 @@ typedef struct Platypus {
 
 Platypus *createRealPlatypus(unsigned int tailLength, unsigned int eggWeight);
 
-char *getScreamOstrich(Platypus *platypus);
+char *getScreamPlatypus(Platypus *platypus);
 
 #endif //SLAUGHTERHOUSE_PLATYPUS_H

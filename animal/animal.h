@@ -4,6 +4,7 @@
 #include "typeanimal.h"
 #include "pig.h"
 #include "unicorn.h"
+#include "platypus.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
@@ -31,6 +32,12 @@ Animal *createUnicorn(const char name[NAME_MAX_SIZE],
                       unsigned int hornLength,
                       unsigned int hornNumber,
                       Rainbow *rainbow);
+
+Animal *createPlatypus(const char name[NAME_MAX_SIZE],
+                       unsigned int weight,
+                       unsigned int birthDate,
+                       unsigned int tailLength,
+                       unsigned int eggWeight);
 
 void dieAnimal(Animal *animal);
 

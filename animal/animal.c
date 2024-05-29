@@ -36,6 +36,18 @@ Animal *createUnicorn(const char name[NAME_MAX_SIZE],
                         createRealUnicorn(hornLength, hornNumber, rainbow));
 }
 
+Animal *createPlatypus(const char name[NAME_MAX_SIZE],
+                       unsigned int weight,
+                       unsigned int birthDate,
+                       unsigned int tailLength,
+                       unsigned int eggWeight) {
+    return createAnimal(name,
+                        weight,
+                        birthDate,
+                        PLATYPUS,
+                        createRealPlatypus(tailLength, eggWeight));
+}
+
 Animal *createAnimal(const char name[NAME_MAX_SIZE],
                      unsigned int weight,
                      unsigned int birthDate,
@@ -51,7 +63,8 @@ Animal *createAnimal(const char name[NAME_MAX_SIZE],
 }
 
 void dieAnimal(Animal *animal) {
-
+    printf("%s est mort\n", animal->name);
+    printf(" son épitaphe  : %s\n", getScreamAnimal(animal));
 }
 
 void growAnimal(Animal *animal) {
@@ -71,5 +84,7 @@ char *getScreamAnimal(Animal *animal) {
             return getScreamPig((Pig *) animal->realAnimal);
         case UNICORN:
             return getScreamUnicorn((Unicorn *) animal->realAnimal);
+        case PLATYPUS:
+            return getScreamPlatypus((Platypus *) animal->realAnimal);
     }
 }

@@ -18,4 +18,8 @@ add_executable(slaughterhouse main.c
         animal/platypus.h
         animal/ostrich.c
         animal/ostrich.h
+        slaughterhouse/animalcell.c
+        slaughterhouse/animalcell.h
+        slaughterhouse/slaughterhouse.c
+        slaughterhouse/slaughterhouse.h
 )
